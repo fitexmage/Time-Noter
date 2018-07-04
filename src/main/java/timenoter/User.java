@@ -1,5 +1,11 @@
 package timenoter;
 
+import timenoter.user.PersonalInfo;
+import timenoter.schedule.Schedule;
+import timenoter.recommendation.Recommendation;
+import timenoter.friend.Friend;
+import timenoter.login.Account;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates

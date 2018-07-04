@@ -1,5 +1,7 @@
 package timenoter;
 
+import timenoter.nav.NavCntl;
+import timenoter.login.LoginCntl;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.stage.Stage;
