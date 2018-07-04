@@ -38,9 +38,9 @@ Functionality for listing the schedule
 Functionality for showing personal information
 
 # Dependency
-## jackson-annotations-2.6.2.jar
-## jackson-core-2.6.2.jar
-## jackson-databind-2.6.7.1.jar
+### jackson-annotations-2.6.2.jar
+### jackson-core-2.6.2.jar
+### jackson-databind-2.6.7.1.jar
 
 # Test
 * Username: test
