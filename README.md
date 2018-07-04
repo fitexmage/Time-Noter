@@ -16,25 +16,25 @@ Store recommendation information
 Store schedule information
 
 ## /src/main/java/timenoter
-*  /src/main/java/timenoter/Data.java
+###  /src/main/java/timenoter/Data.java
 Store all the persistent data
-* /src/main/java/timenoter/Message.java
+### /src/main/java/timenoter/Message.java
 Provide a method to post message
-* /src/main/java/timenoter/TimeNoter.java
+### /src/main/java/timenoter/TimeNoter.java
 Main class
-* /src/main/java/timenoter/User.java
+### /src/main/java/timenoter/User.java
 Store all the data for the current user
-* /src/main/java/timenoter/friend
+### /src/main/java/timenoter/friend
 Functionality for adding friends and sharing schedule with them
-* /src/main/java/timenoter/login
+### /src/main/java/timenoter/login
 Functionality for logining
-* /src/main/java/timenoter/nav
+### /src/main/java/timenoter/nav
 Main interface
-* /src/main/java/timenoter/recommendation
+### /src/main/java/timenoter/recommendation
 Functionality for recommendation
-* /src/main/java/timenoter/schedule
+### /src/main/java/timenoter/schedule
 Functionality for listing the schedule
-* /src/main/java/timenoter/user
+### /src/main/java/timenoter/user
 Functionality for showing personal information
 
 # Dependency
