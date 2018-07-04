@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timenoter.FriendUICntl">
+    <children>
+        <Text layoutX="209.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Noter">
+            <font>
+                <Font size="35.0" />
+            </font>
+        </Text>
+        <Button layoutX="73.0" layoutY="95.0" mnemonicParsing="false" onAction="#home" text="Home" />
+        <Button layoutX="161.0" layoutY="95.0" mnemonicParsing="false" onAction="#user" text="User" />
+        <Button layoutX="237.0" layoutY="95.0" mnemonicParsing="false" onAction="#schedule" text="Schedule" />
+        <Button layoutX="341.0" layoutY="95.0" mnemonicParsing="false" onAction="#friend" text="Friend" />
+        <Button layoutX="427.0" layoutY="95.0" mnemonicParsing="false" onAction="#recommendation" text="Recommendation" />
+        <Separator layoutX="16.0" layoutY="80.0" prefHeight="3.0" prefWidth="569.0" />
+        <Separator layoutX="17.0" layoutY="136.0" prefHeight="3.0" prefWidth="569.0" />
+        <TableView fx:id="friendList" layoutX="10.0" layoutY="148.0" prefHeight="237.0" prefWidth="217.0">
+            <columns>
+                <TableColumn fx:id="friend" prefWidth="75.0" text="Friend" />
+                <TableColumn fx:id="detail" prefWidth="62.0" text="Detail" />
+                <TableColumn fx:id="remove" prefWidth="78.0" text="Remove" />
+            </columns>
+        </TableView>
+        <Separator layoutX="233.0" layoutY="142.0" orientation="VERTICAL" prefHeight="249.0" prefWidth="5.0" />
+        <TextField fx:id="searchName" layoutX="264.0" layoutY="153.0" prefHeight="27.0" prefWidth="155.0" />
+        <Button layoutX="430.0" layoutY="153.0" mnemonicParsing="false" onAction="#apply" text="Apply" />
+        <Button layoutX="496.0" layoutY="153.0" mnemonicParsing="false" onAction="#request" text="Request List" />
+        <GridPane fx:id="friendDetail" layoutX="265.0" layoutY="188.0" prefHeight="79.0" prefWidth="308.0" visible="false">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="90.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="218.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" textAlignment="RIGHT" wrappingWidth="80.0" />
+                <Text fx:id="name" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" textAlignment="RIGHT" wrappingWidth="80.0" GridPane.rowIndex="1" />
+                <Text fx:id="email" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" textAlignment="RIGHT" wrappingWidth="80.0" GridPane.rowIndex="2" />
+                <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <GridPane fx:id="recentEvent" layoutX="265.0" layoutY="281.0" prefHeight="79.0" prefWidth="308.0" visible="false">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="94.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="214.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Event:" textAlignment="RIGHT" wrappingWidth="85.0" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time:" textAlignment="RIGHT" wrappingWidth="85.0" GridPane.rowIndex="1" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Duration:" textAlignment="RIGHT" wrappingWidth="85.0" GridPane.rowIndex="2" />
+                <Text fx:id="eventName" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                <Text fx:id="startTime" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Text fx:id="duration" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <CheckBox fx:id="share" layoutX="268.0" layoutY="367.0" mnemonicParsing="false" text="Share my recent event and daily schedule" visible="false" />
+        <TableView fx:id="requestList" layoutX="306.0" layoutY="200.0" prefHeight="186.0" prefWidth="226.0" visible="false">
+            <columns>
+                <TableColumn fx:id="request" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="accept" prefWidth="75.0" text="Accept" />
+                <TableColumn fx:id="decline" prefWidth="75.0" text="Decline" />
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timenoter.DailyScheduleUICntl">
+    <children>
+        <Text layoutX="209.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Noter">
+            <font>
+                <Font size="35.0" />
+            </font>
+        </Text>
+        <Button layoutX="73.0" layoutY="95.0" mnemonicParsing="false" onAction="#home" text="Home" />
+        <Button layoutX="161.0" layoutY="95.0" mnemonicParsing="false" onAction="#user" text="User" />
+        <Button layoutX="237.0" layoutY="95.0" mnemonicParsing="false" onAction="#schedule" text="Schedule" />
+        <Button layoutX="341.0" layoutY="95.0" mnemonicParsing="false" onAction="#friend" text="Friend" />
+        <Button layoutX="427.0" layoutY="95.0" mnemonicParsing="false" onAction="#recommendation" text="Recommendation" />
+        <Separator layoutX="16.0" layoutY="80.0" prefHeight="3.0" prefWidth="569.0" />
+        <Separator layoutX="17.0" layoutY="136.0" prefHeight="3.0" prefWidth="569.0" />
+        <Pane fx:id="namePage" layoutX="200.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <children>
+                <Text layoutX="34.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Schedule Name" textAlignment="CENTER" wrappingWidth="133.99999409914017" />
+                <TextField fx:id="scheduleName" layoutX="18.0" layoutY="73.0" />
+                <Button layoutX="43.0" layoutY="149.0" mnemonicParsing="false" onAction="#confirmName" prefHeight="27.0" prefWidth="114.0" text="Confirm" />
+            </children>
+        </Pane>
+        <Pane fx:id="schedulePage" layoutX="123.0" layoutY="156.0" prefHeight="231.0" prefWidth="355.0">
+            <children>
+                <Text layoutX="66.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" />
+                <TextField fx:id="type" layoutX="122.0" layoutY="23.0" />
+                <Text layoutX="31.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time:" />
+                <GridPane layoutX="121.0" layoutY="63.0" prefHeight="30.0" prefWidth="134.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <TextField fx:id="startHour" prefHeight="27.0" prefWidth="24.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER" wrappingWidth="9.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="startMinute" prefHeight="27.0" prefWidth="24.0" GridPane.columnIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER" wrappingWidth="9.0" GridPane.columnIndex="3" />
+                        <TextField fx:id="startSecond" prefHeight="27.0" prefWidth="52.0" GridPane.columnIndex="4" />
+                    </children>
+                </GridPane>
+                <Text layoutX="42.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration:" />
+                <GridPane layoutX="120.0" layoutY="105.0" prefHeight="30.0" prefWidth="171.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="110.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="110.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="110.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="90.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <TextField fx:id="hour" prefHeight="27.0" prefWidth="24.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="h" textAlignment="CENTER" wrappingWidth="16.5" GridPane.columnIndex="1" />
+                        <TextField fx:id="minute" prefHeight="27.0" prefWidth="24.0" GridPane.columnIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="m" textAlignment="CENTER" wrappingWidth="16.5" GridPane.columnIndex="3" />
+                        <TextField fx:id="second" prefHeight="27.0" prefWidth="24.0" GridPane.columnIndex="4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="s" textAlignment="CENTER" wrappingWidth="14.5" GridPane.columnIndex="5" />
+                    </children>
+                </GridPane>
+                <Button layoutX="34.0" layoutY="157.0" mnemonicParsing="false" onAction="#previous" text="Previous" />
+                <Button layoutX="139.0" layoutY="157.0" mnemonicParsing="false" onAction="#newEvent" text="New Event" />
+                <Button layoutX="265.0" layoutY="157.0" mnemonicParsing="false" onAction="#next" text="Next" />
+                <Button layoutX="144.0" layoutY="197.0" mnemonicParsing="false" onAction="#confirm" text="Confirm" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
