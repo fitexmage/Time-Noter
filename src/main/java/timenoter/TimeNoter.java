@@ -1,7 +1,9 @@
 package timenoter;
 
-import timenoter.nav.NavCntl;
-import timenoter.login.LoginCntl;
+import timenoter.model.User;
+import timenoter.controller.NavCntl;
+import timenoter.controller.LoginCntl;
+import timenoter.model.Data;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.stage.Stage;
