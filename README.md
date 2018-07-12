@@ -1,5 +1,5 @@
 # Time-Noter
-The project is written in Java 1.8.0. It is a software helping people take notes for their events.
+The project is written in Java 1.8.0 using MVC. It is a software helping people take notes for their events.
 
 # File structure
 
