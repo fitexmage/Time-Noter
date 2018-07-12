@@ -17,6 +17,8 @@ Store schedule information
    
    
 ## /src/main/java/timenoter
+* ###  /src/main/java/timenoter/Timenoter
+Main class
 * ###  /src/main/java/timenoter/UIController
 Connect controller and view, manage element and method on view
 * ###  /src/main/java/timenoter/controller
