@@ -17,26 +17,34 @@ Store schedule information
    
    
 ## /src/main/java/timenoter
-* ###  /src/main/java/timenoter/Data.java
-Store all the persistent data
-* ### /src/main/java/timenoter/Message.java
-Provide a method to post message
-* ### /src/main/java/timenoter/TimeNoter.java
-Main class
-* ### /src/main/java/timenoter/User.java
-Store all the data for the current user
-* ### /src/main/java/timenoter/friend
-Functionality for adding friends and sharing schedule with them
-* ### /src/main/java/timenoter/login
-Functionality for logining
-* ### /src/main/java/timenoter/nav
-Main interface
-* ### /src/main/java/timenoter/recommendation
-Functionality for recommendation
-* ### /src/main/java/timenoter/schedule
-Functionality for listing the schedule
-* ### /src/main/java/timenoter/user
-Functionality for showing personal information
+* ###  /src/main/java/timenoter/UIController
+Connect controller and view, manage element and method on view
+* ###  /src/main/java/timenoter/controller
+Connect model and UIController, control the process
+* ###  /src/main/java/timenoter/model
+Read and write data
+* ###  /src/main/java/timenoter/util
+Utility functions
+
+## /src/main/resources/fxml
+* ### /src/main/resources/fxml/ConfirmUI.fxml
+Register comfirmation interface
+* ### /src/main/resources/fxml/DailyScheduleUI.fxml
+Daily schedule interface
+* ### /src/main/resources/fxml/FriendUI.fxml
+Friend interface
+* ### /src/main/resources/fxml/LoginUI.fxml
+Login interface
+* ### /src/main/resources/fxml/NavUI.fxml
+Navagation interface
+* ### /src/main/resources/fxml/RecommendationUI.fxml
+Recommendation interface
+* ### /src/main/resources/fxml/RegisterUI.fxml
+Register interface
+* ### /src/main/resources/fxml/ScheduleUI.fxml
+Schedule interface
+* ### /src/main/resources/fxml/UserUI.fxml
+User information interface
 
 # Dependency
 ### jackson-annotations-2.6.2.jar
