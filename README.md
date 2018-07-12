@@ -1,9 +1,9 @@
 # Time-Noter
 The project is written in Java 1.8.0. It is a software helping people take notes for their events.
 
-# File structure
+## File structure
 
-## /data
+### /data
 ### /data/account.json
 Store account information
 ### /data/friend.json
@@ -15,7 +15,7 @@ Store recommendation information
 ### /data/schedule.json
 Store schedule information
 
-## /src/main/java/timenoter
+### /src/main/java/timenoter
 ###  /src/main/java/timenoter/Data.java
 Store all the persistent data
 ### /src/main/java/timenoter/Message.java
@@ -37,11 +37,11 @@ Functionality for listing the schedule
 ### /src/main/java/timenoter/user
 Functionality for showing personal information
 
-# Dependency
+## Dependency
 ### jackson-annotations-2.6.2.jar
 ### jackson-core-2.6.2.jar
 ### jackson-databind-2.6.7.1.jar
 
-# Test
+## Test
 * Username: test
 * Password: test
